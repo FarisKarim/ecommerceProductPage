@@ -2,6 +2,7 @@ import Image from "next/image";
 import avatar from "../../public/image-product-1.jpg";
 import cart from "../../public/icon-cart.svg";
 import photo from "../../public/image-avatar.png";
+import firstThumbnail from "../../public/image-product-1-thumbnail.jpg";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center items-center gap-10">
-            <Image src={cart} />
+          <Image src={cart} />
           <Image className="" src={photo} alt="Avatar" width={50} height={50} />
         </div>
       </div>
@@ -28,7 +29,11 @@ export default function Home() {
           <div className="flex flex-col items-center h-full">
             <Image className="rounded-lg h-3/4 w-3/4" src={avatar} alt="pic" />
             <div className="flex mt-5 gap-10 justify-between">
-              <div className="h-28 w-28 bg-orange-400 rounded-lg"></div>
+              <Image
+                src={firstThumbnail}
+                alt="firstthumbnail"
+                className="h-28 w-28 rounded-lg"
+              />
               <div className="h-28 w-28 bg-orange-400 rounded-lg"></div>
               <div className="h-28 w-28 bg-orange-400 rounded-lg"></div>
               <div className="h-28 w-28 bg-orange-400 rounded-lg"></div>
@@ -51,7 +56,9 @@ export default function Home() {
             </p>
             <div className="flex mt-4 justify-start mb-1 gap-5 items-center">
               <div className="text-3xl font-semibold">$125.00</div>
-              <div className="bg-black text-xl text-white rounded-md px-2">50%</div>
+              <div className="bg-black text-xl text-white rounded-md px-2">
+                50%
+              </div>
             </div>
             <p className="text-gray-400 line-through mt-2 mb-5">$250.00</p>
             <div className="flex justify-start h-12 gap-3">
